@@ -52,8 +52,8 @@ public class Servidor extends Thread
         
         try 
         {
-            ServerSocket server = new ServerSocket(10000);
-            System.out.println("Servidor en el socket 10000");
+            ServerSocket server = new ServerSocket(5554);
+            System.out.println("Servidor en el socket 5554");
             
             while (true) 
             {
@@ -100,7 +100,7 @@ public class Servidor extends Thread
             
             while (msg != null && !(msg.trim().equals("")))
             {
-                sendToAll(salida, "Mensaje ", msg);
+                sendToAll(salida, " Escribe :: ", msg);
                 msg = entrada.readLine();
             }
             
@@ -115,6 +115,7 @@ public class Servidor extends Thread
         {
             System.out.println("Fallo de conexion"+" IOException: " + e);
         }
+        
     }
     
     
@@ -132,4 +133,6 @@ public class Servidor extends Thread
             }
         }
       }
+    
+
 }

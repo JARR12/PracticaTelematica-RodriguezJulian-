@@ -20,11 +20,10 @@ public class Cliente extends Thread {
     {
         try {
         	
-        	System.out.println("Digite la ip del servidor:");
+        	System.out.println("Digite la ip del servidor");
         	Scanner leer = new Scanner(System.in);
         	String ip = leer.next();
-            Socket socket = new Socket(ip , 10000);
-            
+            Socket socket = new Socket(ip , 5554);
             PrintStream salida = new PrintStream(socket.getOutputStream());
             BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
             System.out.print("Digite su nombre: ");
