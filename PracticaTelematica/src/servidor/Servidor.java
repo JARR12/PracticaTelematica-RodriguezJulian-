@@ -92,6 +92,9 @@ public class Servidor extends Thread
             
             if (this.nombreCliente == null) 
             {
+                salida.println("Nombre no valido");
+                clientes.add(salida);
+                this.conexion.close();
                 return;
             }
             
